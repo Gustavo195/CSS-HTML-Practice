@@ -1,0 +1,55 @@
+* {
+  color: black;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+article {
+  border: 5px solid black;
+}
+
+button {
+  background-color: black;
+  border-color: black;
+  border-style: solid;
+  color: #f7f7f7;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+button:hover {
+  background-color: white;
+  border-color: white;
+  color: black;
+}
+
+h2, h3 {
+  text-transform: uppercase;
+}
+
+h2 {
+  background-color: #f7f7f7;
+  text-align: center;
+}
+
+h3 {
+  font-size: 17px;
+}
+
+li {
+  list-style-type: square;
+}
+
+.shipping {
+  color: gray;
+  font-size: 10px;
+  text-transform: uppercase;
+}
