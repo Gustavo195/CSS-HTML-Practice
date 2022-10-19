@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -7,7 +8,6 @@ body {
   /* background-color: black; */
   color: #444;
   font-family: sans-serif;
-  border-top: 5px solid #1098ad;
   position: relative;
 }
 
@@ -57,6 +57,10 @@ a:active {
   font-size: italic;
 }
 
+nav a:link {
+  margin-right: 30px;
+}
+
 /*********************************pseudo elements*****************************/
 h1::first-letter {
   font-style: normal;
@@ -78,15 +82,15 @@ h2::after {
 
 /*****************************************************************************/
 article {
-  margin-bottom: 60px;
+  flex: 1;
 }
 
 aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
-  padding: 50px 0;
-  width: 500px;
+  flex: 0 0 300px;
+  padding: 50px 40px;
 }
 
 button {
@@ -122,6 +126,7 @@ h4 {
   font-size: 20px;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 li {
@@ -151,8 +156,9 @@ p {
 
 /*****************************************************************************/
 .container {
-  width: 700px;
+  border-top: 5px solid #1098ad;
   margin: 0 auto;
+  width: 1200px;
 }
 
 .main-header {
@@ -178,4 +184,102 @@ p {
 
 .related {
   list-style: none;
+  margin-left: 0;
+}
+
+/*****************************************************************************/
+/* FLOATS */
+/*****************************************************************************/
+/*
+article {
+  float: left;
+  width: 825px;
+}
+
+aside {
+  float: right;
+  width: 300px;
+}
+
+footer {
+  clear: both;
+}
+
+h1 {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+.author {
+  float: left;
+  /* padding-left: 80px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.author-img {
+  float: left;
+  margin-bottom: 20px;
+}
+
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: block;
+} */
+/*****************************************************************************/
+/* FLEXBOX */
+/*****************************************************************************/
+.author {
+  margin-bottom: 0;
+  margin-left: 15px
+}
+
+.author-box {
+  align-items: center;
+  display: flex;
+  margin-bottom: 15px
+    /* justify-content: flex-start; */
+}
+
+.main-header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.related-author {
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.related-link:link {
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+}
+
+.related-post {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.related-post:last-child {
+  margin-bottom: 0;
+}
+
+.row {
+  align-items: flex-start;
+  display: flex;
+  gap: 75px;
+  margin-bottom: 60px;
 }
